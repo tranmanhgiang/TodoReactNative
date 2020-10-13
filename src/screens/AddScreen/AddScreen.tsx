@@ -16,7 +16,7 @@ const generateID = () => {
     return Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10);
 }
 
-export default function AddScreen({ navigation }) {
+export default function AddScreen({ navigation } : {navigation: any}) {
     const ID = generateID();
     const [newBook, setNewBook] = useState<newbook>({ id: ID, name: '', author: '', description: '' })
     const dispatch = useDispatch();

@@ -4,14 +4,7 @@ import styles from './ItemStyle';
 import Feather from 'react-native-vector-icons/Feather';
 import * as actions from '../../store/actions/books';
 
-export interface param {
-    name: string,
-    author: string,
-    desciption: string,
-    id: number
-}
-
-const Item = ({ name, author, description, id, navigation, dispatch }) => (
+const Item = ({ name, author, description, id, navigation, dispatch } : {name: string, author: string, description: string, id: string, navigation: any, dispatch: any}) => (
     <View style={styles.item}>
         <View style={{ flex: 6, flexDirection: 'column' }}>
             <Text style={styles.name}>{name}</Text>

@@ -12,12 +12,7 @@ export interface editbook {
     description: string
 }
 
-export interface parameters {
-    route: object,
-    navigation: object
-}
-
-export default function EditScreen<parameters>({ route, navigation }) {
+export default function EditScreen({ route, navigation } : {route: any, navigation: any}) {
     const [editBook, setEditBook] = useState<editbook>({ id: '', name: '', author: '', description: '' });
     const { id, name, author, description }: editbook = route.params;
     const dispatch = useDispatch();

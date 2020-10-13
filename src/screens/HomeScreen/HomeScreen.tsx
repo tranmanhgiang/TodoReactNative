@@ -6,17 +6,12 @@ import * as actions from '../../store/actions/books';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Item from '../../components/Item/Item';
 
-export interface param {
-    navigation: object,
-    route: object
-}
-
 export interface rec {
     status: boolean,
     editBook: object
 }
 
-export default function HomeScreen<param>({ navigation, route }) {
+export default function HomeScreen({ navigation, route } : {navigation: any, route: any}) {
 
     const book: Array<object> = useSelector(state => state.book);
     const dispatch = useDispatch();
